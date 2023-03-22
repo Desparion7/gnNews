@@ -1,5 +1,5 @@
 import styles from './Header.module.css';
-import { ImList } from 'react-icons/Im';
+import { ImList } from 'react-icons/im';
 import { TfiViewGrid } from 'react-icons/tfi';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
