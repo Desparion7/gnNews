@@ -1,5 +1,5 @@
 import styles from './Header.module.css';
-import { ImList } from 'react-icons/im';
+import { FaListUl } from 'react-icons/fa';
 import { TfiViewGrid } from 'react-icons/tfi';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -30,7 +30,7 @@ const Header = () => {
 					</Link>
 				</div>
 				<div className={styles.header_viewOptions}>
-					<ImList onClick={handlerListView} />
+					<FaListUl onClick={handlerListView} />
 					<TfiViewGrid onClick={handlerBlocksView} />
 				</div>
 				<div className={styles.header_buttonBox}>
