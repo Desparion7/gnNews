@@ -1,0 +1,35 @@
+.newsList_news {
+	width: 100%;
+	padding: 0.5rem 1rem;
+	margin: 1rem 0;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.newsList_news_source {
+	font-weight: bold;
+	margin-right: 1rem;
+	margin-bottom: 0.5rem;
+	color: var(--main-background-color);
+}
+
+.newsList_news h2 {
+	font-size: 1em;
+	cursor: pointer;
+}
+.newsList_news h2:hover {
+	text-decoration: underline;
+}
+.newsList_news_date {
+	font-size: 0.9rem;
+	text-align: end;
+	margin-top: 0.5rem;
+}
+@media screen and (min-width: 600px) {
+	.newsList_news h2 {
+		font-size: 1.5em;
+	}
+	.newsList_news_date {
+		font-size: 1rem;
+	}
+}

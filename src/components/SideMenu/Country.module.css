@@ -1,0 +1,22 @@
+.country {
+	padding: 1rem;
+}
+.country_countryBox {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 1.5rem;
+	padding: 0.5rem;
+}
+.country_countryBox_flag img {
+	width: 3rem;
+	height: 3rem;
+}
+.country_countryBox_name {
+	font-size: 1.2rem;
+	cursor: pointer;
+	transition: color 0.3s;
+}
+.country_countryBox_name:hover {
+	color: var(--main-background-color);
+}

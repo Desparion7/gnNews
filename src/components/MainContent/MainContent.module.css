@@ -1,0 +1,23 @@
+.mainContent {
+	display: flex;
+	flex-direction: row;
+	margin-top: 1em;
+	padding: 1em 1em;
+}
+.mainContent_container_options {
+	margin: 0 1rem;
+}
+.mainContent_container_options h4 {
+	font-size: 1.1rem;
+}
+.mainContent_container_options select {
+	margin-top: 0.5rem;
+	font-size: 1rem;
+	padding: 0.2rem;
+}
+
+@media screen and (min-width: 1000px) {
+	.mainContent {
+		padding: 1em 4em;
+	}
+}
