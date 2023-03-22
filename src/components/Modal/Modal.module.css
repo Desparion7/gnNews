@@ -102,3 +102,17 @@
 		width: 50%;
 	}
 }
+
+/* Animation */
+
+.show_popup {
+	animation: show-popup 0.4s forwards;
+}
+@keyframes show-popup {
+	from {
+		transform: translateY(-5em);
+	}
+	to {
+		transform: translateY(0);
+	}
+} ;

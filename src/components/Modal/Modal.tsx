@@ -17,7 +17,7 @@ const Popup = ({ article, setShowModal }: propsType) => {
 		<>
 			{!article && (
 				<div className={styles.popup}>
-					<div className={styles.popup_window}>
+					<div className={`${styles.popup_window} ${styles.show_popup}`}>
 						<div className={styles.popup_window_btn}>
 							<button
 								title='close'
@@ -50,7 +50,7 @@ const Popup = ({ article, setShowModal }: propsType) => {
 			)}
 			{article && (
 				<div className={styles.popup}>
-					<div className={styles.popup_window}>
+					<div className={`${styles.popup_window} ${styles.show_popup}`}>
 						<div className={styles.popup_window_btn}>
 							<button
 								title='close'
