@@ -42,7 +42,7 @@ const Popup = ({ article, setShowModal }: propsType) => {
 							Co sprawiło mi największą frajdę?
 						</h3>
 						<p className={styles.popup_window_description}>
-							Największą frajdę sprawiło mi efekt wizualny. Kóry może nie jest
+							Największą frajdę sprawiło mi efekt wizualny. Który może nie jest
 							powalajacy, lecz na tak krótki czas pracy jest zadawlający.
 						</p>
 					</div>

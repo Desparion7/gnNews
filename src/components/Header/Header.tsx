@@ -2,14 +2,17 @@ import styles from './Header.module.css';
 import { FaListUl } from 'react-icons/fa';
 import { TfiViewGrid } from 'react-icons/tfi';
 import { Link } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { changeView } from '../../store/newsViewSlice';
 import { useState } from 'react';
+import { lastUsedView } from '../../store/newsViewSlice';
+
 import Modal from '../Modal/Modal';
 
 const Header = () => {
 	const dispatch = useDispatch();
 	const [showModal, setShowModal] = useState(false);
+	const view = useSelector(lastUsedView);
 
 	const handlerListView = () => {
 		dispatch(changeView('list'));
@@ -30,8 +33,14 @@ const Header = () => {
 					</Link>
 				</div>
 				<div className={styles.header_viewOptions}>
-					<FaListUl onClick={handlerListView} />
-					<TfiViewGrid onClick={handlerBlocksView} />
+					<FaListUl
+						onClick={handlerListView}
+						className={`${view === 'list' && styles.active}`}
+					/>
+					<TfiViewGrid
+						onClick={handlerBlocksView}
+						className={`${view === 'blocks' && styles.active}`}
+					/>
 				</div>
 				<div className={styles.header_buttonBox}>
 					<button

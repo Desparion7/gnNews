@@ -11,7 +11,6 @@ import { lastUsedView } from '../../store/newsViewSlice';
 import NewsList from './NewsList';
 import NewsBlocks from './NewsBlocks';
 
-
 const MainContent = () => {
 	let id = 'us';
 	const params = useParams();

@@ -40,23 +40,30 @@
 }
 .popup_window_btn {
 	position: absolute;
-	top: 0.5rem;
-	right: 0.5rem;
+	top: 0;
+	right: 0;
+	width: 100%;
 	display: flex;
 	justify-content: end;
 	align-items: center;
+	border-top-right-radius: 5px;
+	border-top-left-radius: 5px;
+	background-color: var(--main-background-color);
 }
 .popup_window_btn button {
-	font-size: 1.2rem;
+	font-size: 1.5rem;
+	font-size: bold;
 	padding: 0.5rem;
 	border: none;
+	color: white;
 	background: transparent;
 	cursor: pointer;
 }
 
 .popup_window_title {
 	font-size: 1rem;
-	margin: 1rem 0;
+	margin-top: 2rem;
+	margin-bottom: 1rem;
 }
 .popup_window_description {
 	font-size: 0.8rem;

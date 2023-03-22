@@ -49,6 +49,9 @@
 .header_buttonBox button:hover {
 	color: var(--text-color2);
 }
+.active {
+	color: var(--main-background-color);
+}
 
 @media screen and (min-width: 400px) {
 	.header_name h1 {
