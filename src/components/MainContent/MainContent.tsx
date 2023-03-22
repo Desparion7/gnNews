@@ -40,25 +40,23 @@ const MainContent = () => {
 				{isError && <div>No news avaible</div>}
 				{isSuccess && (
 					<div className={styles.mainContent_container}>
-						{!isDesktop && (
-							<div className={styles.mainContent_container_options}>
-								<h4>NEWS COUNTRY:</h4>
-								<select
-									name='country'
-									id='country'
-									value={id}
-									onChange={(e) => {
-										setSelectedCountry(e.target.value);
-									}}
-								>
-									{countryList.map((country) => (
-										<option value={country.short} key={country.name}>
-											{country.name}
-										</option>
-									))}
-								</select>
-							</div>
-						)}
+						<div className={styles.mainContent_container_options}>
+							<h4>NEWS COUNTRY:</h4>
+							<select
+								name='country'
+								id='country'
+								value={id}
+								onChange={(e) => {
+									setSelectedCountry(e.target.value);
+								}}
+							>
+								{countryList.map((country) => (
+									<option value={country.short} key={country.name}>
+										{country.name}
+									</option>
+								))}
+							</select>
+						</div>
 						{view === 'list' && <NewsList articles={data.articles} />}
 						{view === 'blocks' && <NewsBlocks articles={data.articles} />}
 					</div>
