@@ -32,11 +32,7 @@ const Popup = ({ article, setShowModal }: propsType) => {
 							Co sprawiło mi trudność?
 						</h3>
 						<p className={styles.popup_window_description}>
-							Najwięcej czasu na początku poświęciłem na szukanie w Api
-							możliwości pobrania wszystkich krajów. Niesteyt nie znalazłem
-							takiej możlowści. Udało mi się tylko pozyskać ze strony flagi
-							krajów. Na obecną chwilę nie mam jeszcze pomysłu na tłumaczenie i
-							nie napisałem testów.
+							Nie wykonałem jeszcze tłumaczeni i nie napisałem testów
 						</p>
 						<h3 className={styles.popup_window_title}>
 							Co sprawiło mi największą frajdę?
