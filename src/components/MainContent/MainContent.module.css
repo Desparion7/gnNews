@@ -4,11 +4,18 @@
 	margin-top: 1em;
 	padding: 1em 1em;
 }
+.mainContent_status {
+	margin-top: 1em;
+	font-size: 1em;
+	text-align: center;
+	width: 100%;
+}
 .mainContent_container_options {
 	margin: 0 1rem;
 }
 .mainContent_container_options h4 {
 	font-size: 1.1rem;
+	text-transform: uppercase;
 }
 .mainContent_container_options select {
 	margin-top: 0.5rem;

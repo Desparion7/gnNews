@@ -1,6 +1,7 @@
 import styles from './NewsBlocks.module.css';
 import { useState } from 'react';
 import Modal from '../Modal/Modal';
+import { useTranslation } from 'react-i18next';
 
 interface propsType {
 	articles: [
@@ -19,6 +20,7 @@ interface propsType {
 }
 
 const NewsBlocks = ({ articles }: propsType) => {
+	const { t } = useTranslation();
 	const [showModal, setShowModal] = useState(false);
 	const [popupArticle, setPopupArticle] = useState({
 		title: '',
@@ -56,7 +58,7 @@ const NewsBlocks = ({ articles }: propsType) => {
 							</div>
 						</div>
 						<div className={styles.newsBlocks_news_date}>
-							Date: {article.publishedAt.substring(10, 0)}
+							{t('date')}: {article.publishedAt.substring(10, 0)}
 						</div>
 					</div>
 				))}

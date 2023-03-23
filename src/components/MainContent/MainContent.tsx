@@ -10,11 +10,13 @@ import { useSelector } from 'react-redux';
 import { lastUsedView } from '../../store/newsViewSlice';
 import NewsList from './NewsList';
 import NewsBlocks from './NewsBlocks';
+import { useTranslation } from 'react-i18next';
 
 const MainContent = () => {
 	let id = 'us';
 	const params = useParams();
 	const view = useSelector(lastUsedView);
+	const { t } = useTranslation();
 
 	if (params.id) {
 		id = params.id;
@@ -33,36 +35,39 @@ const MainContent = () => {
 	}, [selectedCountry]);
 
 	return (
-		<>
-			<section className={styles.mainContent}>
-				{isDesktop && <SideMenu />}
-				{isLoading && <div>Loading...</div>}
-				{isError && <div>No news avaible</div>}
-				{isSuccess && (
-					<div className={styles.mainContent_container}>
-						<div className={styles.mainContent_container_options}>
-							<h4>NEWS COUNTRY:</h4>
-							<select
-								name='country'
-								id='country'
-								value={id}
-								onChange={(e) => {
-									setSelectedCountry(e.target.value);
-								}}
-							>
-								{countryList.map((country) => (
-									<option value={country.short} key={country.name}>
-										{country.name}
-									</option>
-								))}
-							</select>
-						</div>
-						{view === 'list' && <NewsList articles={data.articles} />}
-						{view === 'blocks' && <NewsBlocks articles={data.articles} />}
+		<section className={styles.mainContent}>
+			{isDesktop && <SideMenu />}
+
+			{isLoading && (
+				<div className={styles.mainContent_status}>{t('loading')}</div>
+			)}
+			{isError && (
+				<div className={styles.mainContent_status}>{t('No news avaible')}</div>
+			)}
+			{isSuccess && (
+				<div className={styles.mainContent_container}>
+					<div className={styles.mainContent_container_options}>
+						<h4>{t('News from the country')}:</h4>
+						<select
+							name='country'
+							id='country'
+							value={id}
+							onChange={(e) => {
+								setSelectedCountry(e.target.value);
+							}}
+						>
+							{countryList.map((country) => (
+								<option value={country.short} key={country.name}>
+									{country.name}
+								</option>
+							))}
+						</select>
 					</div>
-				)}
-			</section>
-		</>
+					{view === 'list' && <NewsList articles={data.articles} />}
+					{view === 'blocks' && <NewsBlocks articles={data.articles} />}
+				</div>
+			)}
+		</section>
 	);
 };
 

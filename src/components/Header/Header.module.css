@@ -1,10 +1,12 @@
 .header {
+	padding: 0 1em 1em;
+	border-bottom: 1px solid var(--border-color);
+}
+
+.header_container {
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 1em;
-	padding: 1em 1em;
-	border-bottom: 1px solid var(--border-color);
 }
 .header_name a {
 	text-decoration: none;
@@ -30,10 +32,10 @@
 .header_viewOptions svg:hover {
 	color: var(--main-background-color);
 }
+
 .header_buttonBox {
 	display: flex;
 	justify-content: center;
-	align-items: center;
 }
 .header_buttonBox button {
 	font-size: 0.8rem;
@@ -53,6 +55,23 @@
 	color: var(--main-background-color);
 }
 
+.language {
+	display: flex;
+	justify-content: end;
+}
+.language img {
+	width: 1em;
+	height: 1em;
+	margin-left: 0.5em;
+	margin-bottom: 0.5em;
+	cursor: pointer;
+	transition: border-color 0.4s ease;
+	border: 1px solid white;
+}
+.language img:hover {
+	border: 1px solid grey;
+}
+
 @media screen and (min-width: 400px) {
 	.header_name h1 {
 		font-size: 2em;
@@ -66,9 +85,14 @@
 		font-size: 3em;
 	}
 	.header_buttonBox button {
-		font-size: 1.4rem;
+		font-size: 1.2rem;
 		padding: 0.5rem 1rem;
 		letter-spacing: 2px;
+	}
+	.language img {
+		width: 2em;
+		height: 1.5em;
+		margin-left: 1em;
 	}
 }
 
@@ -78,10 +102,5 @@
 	}
 	.header_name h1 {
 		font-size: 5em;
-	}
-	.header_buttonBox button {
-		font-size: 1.5rem;
-		padding: 0.5rem 1rem;
-		letter-spacing: 2px;
 	}
 }

@@ -2,10 +2,12 @@ import styles from './Footer.module.css';
 import { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { useGetAllNewsQuery } from '../../store/apiSlice';
+import { useTranslation } from 'react-i18next';
 
 let id = 'us';
 
 const Footer = () => {
+	const { t } = useTranslation();
 	const params = useParams();
 	const [time, setTime] = useState('');
 	if (params.id) {
@@ -40,7 +42,10 @@ const Footer = () => {
 		<footer className={styles.footer}>
 			<div className={styles.footer_time}>{time}</div>
 			{data && (
-				<div className={styles.footer_time}> News: {data.totalResults}</div>
+				<div className={styles.footer_time}>
+					{' '}
+					{t('news')}: {data.totalResults}
+				</div>
 			)}
 		</footer>
 	);
