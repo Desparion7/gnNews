@@ -56,10 +56,12 @@ const Header = () => {
 					</div>
 					<div className={styles.header_viewOptions}>
 						<FaListUl
+							data-testid='list-icon'
 							onClick={handlerListView}
 							className={`${view === 'list' && styles.active}`}
 						/>
 						<TfiViewGrid
+							data-testid='blocks-icon'
 							onClick={handlerBlocksView}
 							className={`${view === 'blocks' && styles.active}`}
 						/>
