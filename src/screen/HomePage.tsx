@@ -1,8 +1,7 @@
 import styles from './HomePage.module.css';
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
-import MainContent from '../components/MainContent/MainContent';
-import { useLocation } from 'react-router-dom';
+import { useLocation, Outlet } from 'react-router-dom';
 import { useEffect } from 'react';
 
 const HomePage = () => {
@@ -14,7 +13,7 @@ const HomePage = () => {
 	return (
 		<div className={styles.homePage}>
 			<Header />
-			<MainContent />
+			<Outlet />
 			<Footer />
 		</div>
 	);
